@@ -8,15 +8,15 @@
 
 import Foundation
 
+
 class Requests{
     
-    static func http_requst(address: String) {
-        // http://192.168.0.235/dothreeleg.py?r=w
+    static func getRequst(address: String) {
         
-        print("requests called.")
-        
-        var request = URLRequest(url: URL(string: address)!)
-        request.httpMethod = "POST"
+        let endPoint = "http://0.0.0.0:80/" + address
+        print(endPoint)
+        var request = URLRequest(url: URL(string: endPoint)!)
+        request.httpMethod = "GET"
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {                                                 // check for fundamental networking error
                 print("error=\(String(describing: error))")
@@ -33,6 +33,5 @@ class Requests{
         }
         task.resume()
     }
-    
     
 }

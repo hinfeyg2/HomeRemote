@@ -128,11 +128,11 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9TJ-Uz-NxO">
                                 <rect key="frame" x="46" y="491" width="75" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <state key="normal" title="Volume Up"/>
                                 <connections>
-                                    <action selector="longPress:" destination="zDT-pu-Cst" eventType="touchUpInside" id="Cgz-wO-j4b"/>
-                                    <action selector="tapPress:" destination="zDT-pu-Cst" eventType="touchUpInside" id="3pd-t1-23C"/>
-                                    <action selector="volume_up:" destination="zDT-pu-Cst" eventType="touchUpInside" id="Xti-dX-Mhd"/>
+                                    <outletCollection property="gestureRecognizers" destination="NFb-xR-LXr" appends="YES" id="2HQ-cf-oXc"/>
+                                    <outletCollection property="gestureRecognizers" destination="lXI-zI-C8F" appends="YES" id="QKo-be-1W8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBx-87-AyG">
@@ -181,6 +181,16 @@
                     <navigationItem key="navigationItem" title="Watch TV" id="HLt-tt-SDI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i58-PS-Y45" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="NFb-xR-LXr">
+                    <connections>
+                        <action selector="VolumeUpLongWithRecognizer:" destination="zDT-pu-Cst" id="svI-Mi-EWn"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <tapGestureRecognizer id="lXI-zI-C8F">
+                    <connections>
+                        <action selector="VolumeUpTapWithRecognizer:" destination="zDT-pu-Cst" id="pEx-cL-laR"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="893.60000000000002" y="-46.326836581709152"/>
         </scene>

@@ -20,30 +20,16 @@ class WatchTV_ViewController: UIViewController {
         // Dispose of any resou rces that can be recreated.
     }
 
-//    @IBAction func longPress(_ gestureRecognizer: UILongPressGestureRecognizer) {
-//
-//        if gestureRecognizer.state == .began {
-//            print("started long press")
-//        }
-//
-//        if gestureRecognizer.state == .ended {
-//            print("ended long press")
-//        }
-//
-//    }
-//
-//    @IBAction func tapPress(_ gestureRecognizer: UITapGestureRecognizer) {
-//
-//        if gestureRecognizer.state == .began {
-//            print("started tap press")
-//        }
-//
-//        if gestureRecognizer.state == .ended {
-//            print("ended tap press")
-//        }
-//
-//    }
+    @IBAction func VolumeUpLong(recognizer:UILongPressGestureRecognizer) {
+        if recognizer.state == .ended
+        {
+            Requests.getRequst(address: "vol_up_stop")
+        } else if recognizer.state == .began {
+            Requests.getRequst(address: "vol_up_start")
+        }
+    }
 
-    
-    
+    @IBAction func VolumeUpTap(recognizer:UITapGestureRecognizer) {
+        Requests.getRequst(address: "vol_up_one")
+    }
 }

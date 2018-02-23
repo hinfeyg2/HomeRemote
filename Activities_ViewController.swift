@@ -21,10 +21,11 @@ class Activities_ViewController: UIViewController {
     }
     
     @IBAction func AppleTVMusic(_ sender: Any) {
-        Requests.http_requst(address: "http://192.168.0.234/dothreeleg.py?activity=appletv_music")
+        print("atv")
+        
     }
     
     @IBAction func WatchTV(_ sender: Any) {
-        Requests.http_requst(address: "http://192.168.0.234/dothreeleg.py?activity=watch_tv")
+        print("watch tv")
     }
 }
