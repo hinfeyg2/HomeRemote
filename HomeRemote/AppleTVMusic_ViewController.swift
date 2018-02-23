@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AppleTVMusic_ViewController: UIViewController {
+class WatchTV_ViewController: UIViewController {
     
     @IBOutlet weak var amp_vol_up: UIButton!
     @IBOutlet weak var amp_vol_down: UIButton!
@@ -40,8 +40,8 @@ class AppleTVMusic_ViewController: UIViewController {
         // Dispose of any resou rces that can be recreated.
     }
 
-    func http_requst(address: String) {
-        // http://192.168.192.27/dothreeleg.py?r=w
+    @objc func http_requst(address: String) {
+        // http://192.168.0.234/dothreeleg.py?r=w
         
         var request = URLRequest(url: URL(string: address)!)
         request.httpMethod = "POST"
@@ -63,44 +63,44 @@ class AppleTVMusic_ViewController: UIViewController {
     }
     
 //    @IBAction func upc(_ sender: Any) {
-//        http_requst(address: "http://192.168.192.27/dothreeleg.py?r=w")
+//        http_requst(address: "http://192.168.0.234/dothreeleg.py?r=w")
 //    }
 
     @IBAction func vol_up_normal(_ sender: Any) {
         print("Normal tap up")
-        http_requst(address: "http://192.168.192.27/dothreeleg.py?vol_up_normal=on")
+        http_requst(address: "http://192.168.0.234/dothreeleg.py?vol_up_normal=on")
     }
     
-    func vol_up_long(_ sender: UIGestureRecognizer){
+    @objc func vol_up_long(_ sender: UIGestureRecognizer){
         print("Long tap up")
         if sender.state == .ended {
             print("UIGestureRecognizerStateEnded")
             //Do Whatever You want on End of Gesture
-            http_requst(address: "http://192.168.192.27/dothreeleg.py?vol_up_long=off")
+            http_requst(address: "http://192.168.0.234/dothreeleg.py?vol_up_long=off")
         }
         else if sender.state == .began {
             print("UIGestureRecognizerStateBegan.")
             //Do Whatever You want on Began of Gesture
-            http_requst(address: "http://192.168.192.27/dothreeleg.py?vol_up_long=on")
+            http_requst(address: "http://192.168.0.234/dothreeleg.py?vol_up_long=on")
         }
     }
     
     @IBAction func vol_down_normal(_ sender: UIGestureRecognizer) {
         print("Normal tap down")
-        http_requst(address: "http://192.168.192.27/dothreeleg.py?vol_down_normal=on")
+        http_requst(address: "http://192.168.0.234/dothreeleg.py?vol_down_normal=on")
     }
 
-    func vol_down_long(_ sender: UIGestureRecognizer){
+    @objc func vol_down_long(_ sender: UIGestureRecognizer){
         print("Long tap down")
         if sender.state == .ended {
             print("UIGestureRecognizerStateEnded")
             //Do Whatever You want on End of Gesture
-            http_requst(address: "http://192.168.192.27/dothreeleg.py?vol_down_long=off")
+            http_requst(address: "http://192.168.0.234/dothreeleg.py?vol_down_long=off")
         }
         else if sender.state == .began {
             print("UIGestureRecognizerStateBegan.")
             //Do Whatever You want on Began of Gesture
-            http_requst(address: "http://192.168.192.27/dothreeleg.py?vol_down_long=on")
+            http_requst(address: "http://192.168.0.234/dothreeleg.py?vol_down_long=on")
         }
     }
     

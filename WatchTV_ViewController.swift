@@ -19,4 +19,31 @@ class WatchTV_ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resou rces that can be recreated.
     }
+
+//    @IBAction func longPress(_ gestureRecognizer: UILongPressGestureRecognizer) {
+//
+//        if gestureRecognizer.state == .began {
+//            print("started long press")
+//        }
+//
+//        if gestureRecognizer.state == .ended {
+//            print("ended long press")
+//        }
+//
+//    }
+//
+//    @IBAction func tapPress(_ gestureRecognizer: UITapGestureRecognizer) {
+//
+//        if gestureRecognizer.state == .began {
+//            print("started tap press")
+//        }
+//
+//        if gestureRecognizer.state == .ended {
+//            print("ended tap press")
+//        }
+//
+//    }
+
+    
+    
 }
