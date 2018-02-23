@@ -26,6 +26,6 @@ class Activities_ViewController: UIViewController {
     }
     
     @IBAction func WatchTV(_ sender: Any) {
-        print("watch tv")
+        Requests.getRequst(address: "activity/watch_tv")
     }
 }
