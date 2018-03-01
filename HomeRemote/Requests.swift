@@ -8,12 +8,11 @@
 
 import Foundation
 
-
 class Requests{
     
     static func getRequst(address: String) {
 
-        let endPoint = "http://0.0.0.0:80/" + address
+        let endPoint = "http://192.168.0.235/" + address
 //        let endPoint = "http://0.0.0.0:80/" + address
         print(endPoint)
         var request = URLRequest(url: URL(string: endPoint)!)
