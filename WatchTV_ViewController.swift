@@ -29,7 +29,49 @@ class WatchTV_ViewController: UIViewController {
         }
     }
 
+    @IBAction func VolumeDownLong(recognizer:UILongPressGestureRecognizer) {
+        if recognizer.state == .ended
+        {
+            Requests.getRequst(address: "vol_down_stop")
+        } else if recognizer.state == .began {
+            Requests.getRequst(address: "vol_down_start")
+        }
+    }
+
     @IBAction func VolumeUpTap(recognizer:UITapGestureRecognizer) {
         Requests.getRequst(address: "vol_up_one")
     }
+    
+    @IBAction func VolumeDownTap(recognizer:UITapGestureRecognizer) {
+        Requests.getRequst(address: "vol_down_one")
+    }
+    
+    @IBAction func MuteTap(recognizer:UITapGestureRecognizer) {
+        Requests.getRequst(address: "vol_mute")
+    }
+    
+    @IBAction func NavLeft(recognizer:UITapGestureRecognizer) {
+        Requests.getRequst(address: "nav/left")
+    }
+    
+    @IBAction func NavRight(recognizer:UITapGestureRecognizer) {
+        Requests.getRequst(address: "nav/right")
+    }
+    
+    @IBAction func NavUp(recognizer:UITapGestureRecognizer) {
+        Requests.getRequst(address: "nav/up")
+    }
+    
+    @IBAction func NavDown(recognizer:UITapGestureRecognizer) {
+        Requests.getRequst(address: "nav/down")
+    }
+    
+    @IBAction func NavOk(recognizer:UITapGestureRecognizer) {
+        Requests.getRequst(address: "nav/ok")
+    }
+    
+    @IBAction func NavBack(recognizer:UITapGestureRecognizer) {
+        Requests.getRequst(address: "nav/back")
+    }
+
 }
