@@ -211,7 +211,18 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Watch TV" id="HLt-tt-SDI"/>
+                    <navigationItem key="navigationItem" title="Watch TV" id="HLt-tt-SDI">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="z76-KR-UYc">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="a4w-0u-Ibw">
+                                <rect key="frame" x="286" y="7" width="73" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Schedule"/>
+                            </button>
+                            <connections>
+                                <segue destination="of5-jM-4Py" kind="show" id="k3q-QF-3cT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i58-PS-Y45" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="lXI-zI-C8F">
@@ -271,6 +282,24 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="893.60000000000002" y="-46.326836581709152"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FT2-mu-ci3">
+            <objects>
+                <viewController id="of5-jM-4Py" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B8b-C9-OBJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="1PN-5X-LC2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gMp-cX-jX1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cbO-7m-B1y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1722" y="-383"/>
         </scene>
     </scenes>
     <resources>
